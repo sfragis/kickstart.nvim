@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 --[[
 -- Keybindings
 -- ===========
@@ -10,11 +9,5 @@
 --]]
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
-vim.keymap.set('n', '<leader>t', ':Neotree toggle<CR>', {desc = 'Open Neo[T]ree'})
-vim.keymap.set('n', '<leader>Z', ':ZenMode<CR>', {desc = 'Toggle [Z]enMode'})
-=======
-vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
-vim.keymap.set('n', '<leader>t', ':Neotree<CR>', {desc = 'Open Neo[T]ree'})
-vim.keymap.set('n', '<leader>Z', ':ZenMoDe<CR>', {desc = 'Toggle [Z]enMode'})
->>>>>>> c328aca (More settings)
-
+vim.keymap.set('n', '<leader>t', ':Neotree toggle<CR>', { desc = 'Open Neo[T]ree' })
+vim.keymap.set('n', '<leader>Z', ':ZenMode<CR>', { desc = 'Toggle [Z]enMode' })

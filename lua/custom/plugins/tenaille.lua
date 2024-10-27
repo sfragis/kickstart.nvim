@@ -1,7 +1,7 @@
 return {
   'doums/tenaille.nvim',
-  config = function() 
-    require('tenaille').setup({
+  config = function()
+    require('tenaille').setup {
       -- generate default mapping for each pair using
       -- <leader>_open-character_
       -- i.e.
@@ -20,6 +20,6 @@ return {
         { '(', ')' },
         { '<', '>' },
       },
-    })
-  end
+    }
+  end,
 }

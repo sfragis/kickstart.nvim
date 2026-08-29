@@ -1,15 +1,13 @@
--- Unless you are still migrating, remove the deprecated commands from v1.x
-vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
-
-return {
-  "nvim-neo-tree/neo-tree.nvim",
-  version = "*",
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-    "MunifTanjim/nui.nvim",
-  },
-  config = function ()
-    require('neo-tree').setup {}
-  end,
+-- neo-tree.nvim - file explorer sidebar
+--
+-- `plenary.nvim` is already installed by the telescope section of `init.lua`,
+-- but it is listed here too so this module stands on its own.
+-- `nvim-web-devicons` is intentionally omitted: this config uses `mini.icons`,
+-- and only mocks the devicons API when `vim.g.have_nerd_font` is true.
+vim.pack.add {
+  'https://github.com/nvim-lua/plenary.nvim',
+  'https://github.com/MunifTanjim/nui.nvim',
+  'https://github.com/nvim-neo-tree/neo-tree.nvim',
 }
+
+require('neo-tree').setup {}

@@ -980,6 +980,12 @@ do
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   -- require 'custom.plugins'
+
+  -- Personal customizations. This is deliberately the ONLY line in this file
+  -- that is not upstream kickstart, so that merging from upstream has a single
+  -- point of conflict. Everything it loads lives in `lua/custom/`.
+  --  See `lua/custom/init.lua`.
+  require 'custom'
 end
 
 -- The line beneath this is called `modeline`. See `:help modeline`

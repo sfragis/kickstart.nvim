@@ -19,5 +19,8 @@ vim.opt.shiftwidth = 2 -- spaces per indentation level
 
 vim.cmd [[ set noswapfile ]]
 
+-- let <Left>/<Right> wrap across line boundaries (normal/visual: < >, insert: [ ])
+vim.opt.whichwrap:append '<,>,[,]'
+
 --Line numbers
 vim.wo.number = true

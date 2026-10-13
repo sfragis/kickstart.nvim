@@ -12,13 +12,15 @@
 | `<leader>Z` | normal | Toggle ZenMode |
 | `<Up>` / `<Down>` | normal, visual, insert | Move by display line on wrapped lines (with a count, e.g. `5<Down>`, they move by real lines) |
 
-## Comments
+## Comments (Comment.nvim)
 
 | Key | Mode | Action |
 |---|---|---|
 | `gcc` | normal | Toggle line comment |
-| `gc` | visual | Toggle line comment on the selection |
-| `gbc` / `gb` | normal / visual | Toggle block comment. **Not available:** Neovim's built-in commenting only provides `gc`; `gb` needs a plugin such as Comment.nvim |
+| `gbc` | normal | Toggle block comment (e.g. `/* ... */` in C) |
+| `gc` / `gb` | visual | Toggle line / block comment on the selection |
+| `gc{motion}` / `gb{motion}` | normal | Line / block comment over a motion, e.g. `gcap` for a paragraph, `gb2j` for three lines |
+| `gcO` / `gco` / `gcA` | normal | Add a comment above / below / at the end of the line |
 
 ## Completion (blink.cmp, `default` preset)
 
@@ -41,7 +43,8 @@ On macOS, `<C-space>` may be taken by the system input-source shortcut.
 | Key | Mode | Action |
 |---|---|---|
 | `K` | normal | Hover docs for the symbol under the cursor |
-| `grd` | normal | Go to definition |
+| `grd` | normal | Go to definition. On an `#include` line, opens the included file (system and library headers too) |
+| `<leader>ch` | normal | C/C++ only: switch between source file and header (`:LspClangdSwitchSourceHeader`) |
 | `grD` | normal | Go to declaration |
 | `grr` | normal | Find references |
 | `gri` | normal | Go to implementation |

@@ -12,6 +12,35 @@
 | `<leader>Z` | normal | Toggle ZenMode |
 | `<Up>` / `<Down>` | normal, visual, insert | Move by display line on wrapped lines (with a count, e.g. `5<Down>`, they move by real lines) |
 
+## Search (Telescope)
+
+Files are searched under Neovim's working directory (`:pwd` shows it, `:cd` changes it).
+
+| Key | Mode | Action |
+|---|---|---|
+| `<leader>sf` | normal | Find files by name |
+| `<leader>s.` | normal | Recently opened files |
+| `<leader>sg` | normal | Live grep: search file contents |
+| `<leader>sw` | normal, visual | Grep for the word under the cursor / the selection |
+| `<leader>s/` | normal | Live grep in open files only |
+| `<leader>/` | normal | Fuzzy search inside the current file |
+| `<leader>sc` | normal | Commands (like a command palette) |
+| `<leader>sk` | normal | Keymaps |
+| `<leader>sh` | normal | Help tags |
+| `<leader>sn` | normal | Files in the Neovim config directory |
+| `<leader>ss` | normal | List all Telescope pickers |
+| `<leader>sr` | normal | Reopen the last picker with its query |
+
+Inside a picker:
+
+| Key | Mode | Action |
+|---|---|---|
+| `<C-n>` / `<C-p>` or `<Down>` / `<Up>` | insert | Next / previous result |
+| `<Enter>` | insert, normal | Open the selected result |
+| `<C-x>` / `<C-v>` / `<C-t>` | insert, normal | Open in horizontal split / vertical split / new tab |
+| `<Esc>` | insert | Switch to normal mode (`j` / `k` move, `<Esc>` again closes) |
+| `<C-/>` / `?` | insert / normal | Show all picker keys |
+
 ## Comments (Comment.nvim)
 
 | Key | Mode | Action |
